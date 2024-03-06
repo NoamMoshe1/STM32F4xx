@@ -1,0 +1,26 @@
+ /*
+ * 005button_interrupt.c
+ *
+ *  Created on: Feb 26, 2024
+ *      Author: non55
+ */
+#include <stdint.h>
+
+#include "../Driver/Inc/stm32f407xx.h"
+#include "../Driver/Inc/stm32f407xx_gpio_driver.h"
+
+#define HIGH 1
+#define LOW 0
+#define BTN_PRESSED LOW
+
+void delay(void)
+{
+	for(uint32_t i = 0 ; i < 500000/2 ; i ++);
+}
+
+
+int main(void)
+{
+return 0;
+}
+
