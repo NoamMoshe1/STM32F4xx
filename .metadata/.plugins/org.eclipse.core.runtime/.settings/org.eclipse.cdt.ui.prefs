@@ -69,6 +69,7 @@ semanticHighlighting.typeParameter.enabled=true
 semanticHighlighting.typedef.bold=true
 semanticHighlighting.typedef.color=18,144,195
 semanticHighlighting.typedef.enabled=true
+sourceHoverBackgroundColor=47,47,47
 spelling_locale_initialized=true
 useAnnotationsPrefPage=true
 useQuickDiffPrefPage=true
