@@ -63,6 +63,7 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnorDi)
 		{
 			GPIOI_PCLK_EN();
 		}
+
 	}
 	else
 	{
@@ -75,7 +76,7 @@ void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t EnorDi)
  */
 void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 {
-	 uint32_t temp=0; //temp. register
+	 uint32_t temp = 0; //temp register
 
 	 //enable the peripheral clock
 
@@ -90,7 +91,8 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 		pGPIOHandle -> pGPIOx -> MODER &= ~( 0x3 << (2 * pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber)); //clearing
 		pGPIOHandle -> pGPIOx -> MODER |= temp; //setting
 
-	}else
+	}
+	else
 	{
 		//this part will code later . ( interrupt mode)
 		if(pGPIOHandle -> GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_FT)
@@ -100,14 +102,16 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 			//Clear the corresponding RTSR bit
 			EXTI -> RTSR &= ~( 1 << pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber);
 
-		}else if (pGPIOHandle -> GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_RT)
+		}
+		else if (pGPIOHandle -> GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_RT)
 		{
 			//1 . configure the RTSR
 			EXTI -> RTSR |= ( 1 << pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber);
 			//Clear the corresponding RTSR bit
 			EXTI -> FTSR &= ~( 1 << pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber);
 
-		}else if (pGPIOHandle -> GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_RFT)
+		}
+		else if (pGPIOHandle -> GPIO_PinConfig.GPIO_PinMode == GPIO_MODE_IT_RFT)
 		{
 			//1. configure both FTSR and RTSR
 			EXTI -> RTSR |= ( 1 << pGPIOHandle -> GPIO_PinConfig.GPIO_PinNumber);

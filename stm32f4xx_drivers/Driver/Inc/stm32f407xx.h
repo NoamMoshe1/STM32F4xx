@@ -95,10 +95,10 @@
 #define USART3_PERIPH_BASEADDR					(APB1_BUS_BASEADDR + 0x4800)
 
 #define UART4_PERIPH_BASEADDR					(APB1_BUS_BASEADDR + 0x4C00)
-#define UART5_PERIPH_BASEADDR					(APB1_BUS_BASEADDR + 0x5000)
+/*#define UART5_PERIPH_BASEADDR					(APB1_BUS_BASEADDR + 0x5000)
 #define UART7_PERIPH_BASEADDR					(APB1_BUS_BASEADDR + 0x7800)
 #define UART8_PERIPH_BASEADDR					(APB1_BUS_BASEADDR + 0x7C00)
-
+*/
 #define I2C1_PERIPH_BASEADDR					(APB1_BUS_BASEADDR + 0x5400)
 #define I2C2_PERIPH_BASEADDR					(APB1_BUS_BASEADDR + 0x5800)
 #define I2C3_PERIPH_BASEADDR					(APB1_BUS_BASEADDR + 0x5C00)
@@ -119,7 +119,7 @@
 #define TIM11_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x4800)
 
 #define USART1_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x1000)
-#define USART6_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x1400)
+//#define USART6_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x1400)
 
 #define ADC1_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x2000)
 #define ADC2_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x2100)
@@ -128,10 +128,10 @@
 #define SDIO_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x2C00)
 
 #define SPI1_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x3000)
-#define SPI4_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x3400)
+/*#define SPI4_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x3400)
 #define SPI5_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x5000)
 #define SPI6_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x5400)
-
+*/
 #define SYSCFG_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x3800)
 #define EXTI_PERIPH_BASEADDR					(APB2_BUS_BASEADDR + 0x3C00)
 
@@ -349,36 +349,36 @@ typedef struct
  * peripheral definitions ( Peripheral base addresses typecasted to xxx_RegDef_t)
  */
 
-#define GPIOA  				((GPIO_RegDef_t*)GPIOA_PERIPH_BASEADDR)
-#define GPIOB  				((GPIO_RegDef_t*)GPIOB_PERIPH_BASEADDR)
-#define GPIOC  				((GPIO_RegDef_t*)GPIOC_PERIPH_BASEADDR)
-#define GPIOD  				((GPIO_RegDef_t*)GPIOD_PERIPH_BASEADDR)
-#define GPIOE  				((GPIO_RegDef_t*)GPIOE_PERIPH_BASEADDR)
-#define GPIOF  				((GPIO_RegDef_t*)GPIOF_PERIPH_BASEADDR)
-#define GPIOG  				((GPIO_RegDef_t*)GPIOG_PERIPH_BASEADDR)
-#define GPIOH  				((GPIO_RegDef_t*)GPIOH_PERIPH_BASEADDR)
-#define GPIOI  				((GPIO_RegDef_t*)GPIOI_PERIPH_BASEADDR)
+#define GPIOA  				( (GPIO_RegDef_t*) GPIOA_PERIPH_BASEADDR )
+#define GPIOB  				( (GPIO_RegDef_t*) GPIOB_PERIPH_BASEADDR )
+#define GPIOC  				( (GPIO_RegDef_t*) GPIOC_PERIPH_BASEADDR )
+#define GPIOD  				( (GPIO_RegDef_t*) GPIOD_PERIPH_BASEADDR )
+#define GPIOE  				( (GPIO_RegDef_t*) GPIOE_PERIPH_BASEADDR )
+#define GPIOF  				( (GPIO_RegDef_t*) GPIOF_PERIPH_BASEADDR )
+#define GPIOG  				( (GPIO_RegDef_t*) GPIOG_PERIPH_BASEADDR )
+#define GPIOH  				( (GPIO_RegDef_t*) GPIOH_PERIPH_BASEADDR )
+#define GPIOI  				( (GPIO_RegDef_t*) GPIOI_PERIPH_BASEADDR )
 
-#define RCC 				((RCC_RegDef_t*)RCC_PERIPH_BASEADDR)
-#define EXTI				((EXTI_RegDef_t*)EXTI_PERIPH_BASEADDR)
-#define SYSCFG				((SYSCFG_RegDef_t*)SYSCFG_PERIPH_BASEADDR)
+#define RCC 				( (RCC_RegDef_t*) RCC_PERIPH_BASEADDR )
+#define EXTI				( (EXTI_RegDef_t*) EXTI_PERIPH_BASEADDR )
+#define SYSCFG				( (SYSCFG_RegDef_t*) SYSCFG_PERIPH_BASEADDR )
 
-/*
-#define SPI1  				((SPI_RegDef_t*)SPI1_BASEADDR)
-#define SPI2  				((SPI_RegDef_t*)SPI2_BASEADDR)
-#define SPI3  				((SPI_RegDef_t*)SPI3_BASEADDR)
 
-#define I2C1  				((I2C_RegDef_t*)I2C1_BASEADDR)
-#define I2C2  				((I2C_RegDef_t*)I2C2_BASEADDR)
-#define I2C3  				((I2C_RegDef_t*)I2C3_BASEADDR)
+#define SPI1  				((SPI_RegDef_t*)SPI1_PERIPH_BASEADDR)
+#define SPI2  				((SPI_RegDef_t*)SPI2_PERIPH_BASEADDR)
+#define SPI3  				((SPI_RegDef_t*)SPI3_PERIPH_BASEADDR)
 
-#define USART1  			((USART_RegDef_t*)USART1_BASEADDR)
-#define USART2  			((USART_RegDef_t*)USART2_BASEADDR)
-#define USART3  			((USART_RegDef_t*)USART3_BASEADDR)
-#define UART4  				((USART_RegDef_t*)UART4_BASEADDR)
-#define UART5  				((USART_RegDef_t*)UART5_BASEADDR)
-#define USART6  			((USART_RegDef_t*)USART6_BASEADDR)
-*/
+#define I2C1  				((I2C_RegDef_t*)I2C1_PERIPH_BASEADDR)
+#define I2C2  				((I2C_RegDef_t*)I2C2_PERIPH_BASEADDR)
+#define I2C3  				((I2C_RegDef_t*)I2C3_PERIPH_BASEADDR)
+
+#define USART1  			((USART_RegDef_t*)USART1_PERIPH_BASEADDR)
+#define USART2  			((USART_RegDef_t*)USART2_PERIPH_BASEADDR)
+#define USART3  			((USART_RegDef_t*)USART3_PERIPH_BASEADDR)
+#define UART4  				((USART_RegDef_t*)UART4_PERIPH_BASEADDR)
+#define UART5  				((USART_RegDef_t*)UART5_PERIPH_BASEADDR)
+#define USART6  			((USART_RegDef_t*)USART6_PERIPH_BASEADDR)
+
 
 /*
  * Clock Enable Macros for GPIOx peripherals
@@ -442,15 +442,15 @@ typedef struct
  *  Macros to reset GPIOx peripherals
  */
 
-#define GPIOA_REG_RESET()               do{ (RCC -> AHB1RSTR |= (1 << 0)); (RCC->AHB1RSTR &= ~(1 << 0)); }while(0)
-#define GPIOB_REG_RESET()               do{ (RCC -> AHB1RSTR |= (1 << 1)); (RCC->AHB1RSTR &= ~(1 << 1)); }while(0)
-#define GPIOC_REG_RESET()               do{ (RCC -> AHB1RSTR |= (1 << 2)); (RCC->AHB1RSTR &= ~(1 << 2)); }while(0)
-#define GPIOD_REG_RESET()               do{ (RCC -> AHB1RSTR |= (1 << 3)); (RCC->AHB1RSTR &= ~(1 << 3)); }while(0)
-#define GPIOE_REG_RESET()               do{ (RCC -> AHB1RSTR |= (1 << 4)); (RCC->AHB1RSTR &= ~(1 << 4)); }while(0)
-#define GPIOF_REG_RESET()               do{ (RCC -> AHB1RSTR |= (1 << 5)); (RCC->AHB1RSTR &= ~(1 << 5)); }while(0)
-#define GPIOG_REG_RESET()               do{ (RCC -> AHB1RSTR |= (1 << 6)); (RCC->AHB1RSTR &= ~(1 << 6)); }while(0)
-#define GPIOH_REG_RESET()               do{ (RCC -> AHB1RSTR |= (1 << 7)); (RCC->AHB1RSTR &= ~(1 << 7)); }while(0)
-#define GPIOI_REG_RESET()               do{ (RCC -> AHB1RSTR |= (1 << 8)); (RCC->AHB1RSTR &= ~(1 << 8)); }while(0)
+#define GPIOA_REG_RESET()	do{ (RCC -> AHB1RSTR |= (1 << 0)); (RCC->AHB1RSTR &= ~(1 << 0)); }while(0)
+#define GPIOB_REG_RESET()	do{ (RCC -> AHB1RSTR |= (1 << 1)); (RCC->AHB1RSTR &= ~(1 << 1)); }while(0)
+#define GPIOC_REG_RESET()	do{ (RCC -> AHB1RSTR |= (1 << 2)); (RCC->AHB1RSTR &= ~(1 << 2)); }while(0)
+#define GPIOD_REG_RESET()	do{ (RCC -> AHB1RSTR |= (1 << 3)); (RCC->AHB1RSTR &= ~(1 << 3)); }while(0)
+#define GPIOE_REG_RESET()	do{ (RCC -> AHB1RSTR |= (1 << 4)); (RCC->AHB1RSTR &= ~(1 << 4)); }while(0)
+#define GPIOF_REG_RESET()	do{ (RCC -> AHB1RSTR |= (1 << 5)); (RCC->AHB1RSTR &= ~(1 << 5)); }while(0)
+#define GPIOG_REG_RESET()	do{ (RCC -> AHB1RSTR |= (1 << 6)); (RCC->AHB1RSTR &= ~(1 << 6)); }while(0)
+#define GPIOH_REG_RESET()	do{ (RCC -> AHB1RSTR |= (1 << 7)); (RCC->AHB1RSTR &= ~(1 << 7)); }while(0)
+#define GPIOI_REG_RESET()	do{ (RCC -> AHB1RSTR |= (1 << 8)); (RCC->AHB1RSTR &= ~(1 << 8)); }while(0)
 
 /*
  *  returns port code for given GPIOx base address
@@ -471,7 +471,7 @@ typedef struct
 
 /*
  * IRQ(Interrupt Request) Numbers of STM32F407x MCU
- * NOTE: update these macros with valid values according to your MCU
+ * NOTE: update these macros with valid values according to MCU
  * TODO: Complete this list for other peripherals
  */
 
@@ -527,4 +527,65 @@ typedef struct
 #define GPIO_PIN_RESET      RESET
 #define FLAG_RESET          RESET
 #define FLAG_SET 			SET
+
+/******************************************************************************************
+ *Bit position definitions of SPI peripheral
+ ******************************************************************************************/
+
+/*
+ * Bit position definitions SPI_CR1
+ */
+
+#define SPI_CR1_CPHA     				 0
+#define SPI_CR1_CPOL      				 1
+#define SPI_CR1_MSTR     				 2
+#define SPI_CR1_BR   					 3
+#define SPI_CR1_SPE     				 6
+#define SPI_CR1_LSBFIRST   			 	 7
+#define SPI_CR1_SSI     				 8
+#define SPI_CR1_SSM      				 9
+#define SPI_CR1_RXONLY      		 	10
+#define SPI_CR1_DFF     			 	11
+#define SPI_CR1_CRCNEXT   			 	12
+#define SPI_CR1_CRCEN   			 	13
+#define SPI_CR1_BIDIOE     			 	14
+#define SPI_CR1_BIDIMODE      			15
+
+/*
+ * Bit position definitions SPI_CR2
+ */
+
+#define SPI_CR2_RXDMAEN		 			0
+#define SPI_CR2_TXDMAEN				 	1
+#define SPI_CR2_SSOE				 	2
+#define SPI_CR2_FRF						4
+#define SPI_CR2_ERRIE					5
+#define SPI_CR2_RXNEIE				 	6
+#define SPI_CR2_TXEIE					7
+
+/*
+ * Bit position definitions SPI_SR
+ */
+
+#define SPI_SR_RXNE						0
+#define SPI_SR_TXE				 		1
+#define SPI_SR_CHSIDE				 	2
+#define SPI_SR_UDR					 	3
+#define SPI_SR_CRCERR				 	4
+#define SPI_SR_MODF					 	5
+#define SPI_SR_OVR					 	6
+#define SPI_SR_BSY					 	7
+#define SPI_SR_FRE					 	8
+
+/*
+ *  Macros to reset GPIOx peripherals
+ */
+
+#define SPI1_REG_RESET()	do{ (RCC -> APB2RSTR |= (1 << 12)); (RCC->AHB1RSTR &= ~(1 << 12)); }while(0)
+#define SPI2_REG_RESET()	do{ (RCC -> APB1RSTR |= (1 << 14)); (RCC->AHB1RSTR &= ~(1 << 14)); }while(0)
+#define SPI3_REG_RESET()	do{ (RCC -> APB1RSTR |= (1 << 15)); (RCC->AHB1RSTR &= ~(1 << 15)); }while(0)
+
+#include "stm32f407xx_gpio_driver.h"
+#include "stm32f407xx_spi_driver.h"
+
 #endif /* INC_STM32F407XX_H_ */
