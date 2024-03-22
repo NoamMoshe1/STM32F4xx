@@ -1,3 +1,0 @@
-../Src/005button_interrupt.c:16:6:delay	16	static
-../Src/005button_interrupt.c:23:5:main	32	static
-../Src/005button_interrupt.c:65:6:EXTI9_5_IRQHandler	8	static
