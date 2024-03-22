@@ -5,19 +5,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/001led_toggle.c \
-../Src/syscalls.c \
-../Src/sysmem.c 
+../Src/008spi_cmd_handling.c \
+../Src/syscalls.c 
 
 OBJS += \
-./Src/001led_toggle.o \
-./Src/syscalls.o \
-./Src/sysmem.o 
+./Src/008spi_cmd_handling.o \
+./Src/syscalls.o 
 
 C_DEPS += \
-./Src/001led_toggle.d \
-./Src/syscalls.d \
-./Src/sysmem.d 
+./Src/008spi_cmd_handling.d \
+./Src/syscalls.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -27,7 +24,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/001led_toggle.cyclo ./Src/001led_toggle.d ./Src/001led_toggle.o ./Src/001led_toggle.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+	-$(RM) ./Src/008spi_cmd_handling.cyclo ./Src/008spi_cmd_handling.d ./Src/008spi_cmd_handling.o ./Src/008spi_cmd_handling.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su
 
 .PHONY: clean-Src
 
